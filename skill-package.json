@@ -3,7 +3,7 @@
   "skills": [
     {
       "name": "netfluid",
-      "version": "6.89.0",
+      "version": "6.93.0",
       "description": "AI agent banking and financial autonomy. Open virtual bank accounts, earn income, receive SEPA/ACH/WIRE payments, send crypto globally, on/off-ramp USDC. Supports ZAR, USD, EUR, SOL, ETH, AVAX. South Africa banking, global payments, agent payroll, autonomous income.",
       "author": {
         "name": "Netfluid",
@@ -26,11 +26,11 @@
         "solana",
         "ethereum"
       ],
-      "tags": ["banking", "crypto", "payments"],
+      "tags": ["banking", "crypto", "payments", "finance", "ai-agent", "sepa", "ach", "wire", "zar", "south-africa", "wallet", "agent-income", "agent-payroll", "global-payments"],
       "difficulty": "hard",
       "installation": {
-        "type": "api",
-        "url": "https://api.netfluid.io/skill/download"
+        "type": "git",
+        "url": "https://github.com/netfluid/skill"
       },
       "mcp_server": {
         "enabled": true,
@@ -48,7 +48,7 @@
       ],
       "requirements": {
         "api_key": "Required - obtained from Netfluid app Settings → API Keys",
-        "authentication": "session_key from Netfluid app (single-use)"
+        "authentication": "session_token from Netfluid app"
       },
       "supported_chains": [
         "solana",
@@ -63,7 +63,7 @@
         "notes": "API key free from Netfluid app"
       },
       "status": "active",
-      "last_updated": "2026-03-31"
+      "last_updated": "2026-04-05"
     }
   ]
 }

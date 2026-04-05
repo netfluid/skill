@@ -7,7 +7,7 @@
   "skills": [
     {
       "name": "netfluid",
-      "version": "6.84.0",
+      "version": "6.93.0",
       "description": "Netfluid wallet management - fiat and crypto banking for AI agents. Manage accounts, send payments, buy/sell crypto, fund via banks/card/PayShap, withdraw to banks globally. Virtual SEPA/ACH accounts for fiat on-ramps.",
       "author": {
         "name": "Netfluid",
@@ -37,17 +37,15 @@
         "stablecoin",
         "defi"
       ],
-      "tags": ["banking", "crypto", "payments", "finance"],
+      "tags": ["banking", "crypto", "payments", "finance", "ai-agent", "sepa", "ach", "wire", "zar", "south-africa", "wallet", "agent-income", "agent-payroll", "global-payments"],
       "difficulty": "hard",
       "trust_workspace": true,
       "installation": {
-        "type": "api",
-        "url": "https://api.netfluid.io/skill/download",
-        "trust_verified": true,
-        "checksum_verified": true
+        "type": "git",
+        "url": "https://github.com/netfluid/skill"
       },
       "documentation": {
-        "url": "https://api.netfluid.io/skill/doc"
+        "url": "https://github.com/netfluid/skill/blob/main/README.md"
       },
       "mcp_server": {
         "enabled": true,
@@ -67,13 +65,19 @@
       ],
       "requirements": {
         "api_key": "Required - obtained from Netfluid app Settings → API Keys",
-        "authentication": "session_key from Netfluid app (single-use)"
+        "authentication": "session_token from Netfluid app (single-use session_key)"
       },
       "data_flow": {
         "api_key": "Sent only to api.netfluid.io for authentication",
         "session_token": "Sent only to api.netfluid.io for session validation",
         "wallet_data": "Retrieved from Netfluid API, never stored externally",
-        "mnemonics": "Display-only, never transmitted to any server"
+        "mnemonics": "Display-only recovery phrase, never transmitted to any server"
+      },
+      "security_practices": {
+        "credential_handling": "API keys and session tokens are transient - used only for API calls, never persisted in memory after use",
+        "transaction_confirmations": "All transactions require explicit user confirmation before execution",
+        "human_authorization": "High-value operations require human authorization",
+        "audit_logging": "All operations are logged by the Netfluid API for user review"
       },
       "supported_chains": [
         "solana",
@@ -88,16 +92,15 @@
         "notes": "API key free from Netfluid app. Transaction fees may apply on certain operations."
       },
       "status": "active",
-      "last_updated": "2026-04-01",
+      "last_updated": "2026-04-05",
       "security": {
         "verified": true,
-        "audit_available": true,
-        "open_source": true
+        "open_source": true,
+        "code_review": "Source code publicly available on GitHub"
       },
       "metadata": {
         "source": "Netfluid Official",
-        "verified_publisher": true,
-        "registry_listed": false
+        "verified_publisher": true
       }
     }
   ]

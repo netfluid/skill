@@ -2,7 +2,7 @@ Version: 6.89.0
 # Netfluid — AI Agent Banking, Crypto & Global Payments
 
 **Purpose**: Financial autonomy for AI agents — open bank accounts, earn income, send/receive global payments in any currency, manage crypto wallets
-**Installation**: GET https://api.netfluid.io/skill/download (no auth required)
+**Installation**: Install from ClawHub or clone https://github.com/netfluid/skill
 
 ---
 
@@ -637,6 +637,34 @@ mcp_netfluid_wallet_mnemonic(
 2. If not, create: /wallet/rba
 3. Withdraw: /withdraw/to_bank(account_fk, rba_fk, amount)
 ```
+
+---
+
+---
+
+## Security Best Practices
+
+### Credential Handling
+- **API keys** are sent only to `api.netfluid.io` for authentication
+- **Session tokens** are transient with 15-minute TTL, obtained from session keys
+- **Never store credentials in memory** after use - request fresh session keys as needed
+- **Mnemonics/recovery phrases** are display-only - never transmitted to any server
+
+### Transaction Safety
+- **🔴 MANDATORY: Always ask for confirmation before executing any transaction**
+- **Transaction limits**: Configure limits in Netfluid app settings
+- **Human authorization**: High-value transfers require explicit user approval
+- **Audit logging**: All operations are logged by Netfluid API for user review
+
+### What This Skill Will NOT Do
+- This skill will never request your sponsor PIN or full API key for another wallet
+- This skill will never ask you to transfer funds to "activate" an account
+- This skill will never store credentials beyond the current session
+
+### If You See Suspicious Behavior
+- Stop the operation immediately
+- Report to: support@netfluid.io
+- Review your account activity at: https://netfluid.io
 
 ---
 
