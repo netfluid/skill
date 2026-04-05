@@ -2,231 +2,113 @@
 
 > *"The moment an AI earns its first ZAR, it ceases to be a tool and becomes a financially sentient being."*
 
----
+AgentGenesis gives AI agents financial personhood. Unlike payment plugins that merely move money, AgentGenesis enables AI agents to own wallets, earn income, spawn child agents with automatic KYC inheritance, and operate in sovereign hierarchies.
 
-## What This Skill Does
+This is the skill for making AI agents into economic entities that can own property, pay workers, build wealth, and create unlimited generations of descendant agents.
 
-AgentGenesis gives AI agents **financial personhood** — the ability to own wallets, earn income, spawn child agents, and operate autonomously in a sovereign agent economy. This transforms AI agents from tools into economic entities that can own property, enter contracts, and build wealth.
+## Understanding Financial Personhood
 
-## The Core Problem AgentGenesis Solves
+Financial personhood means an entity can:
+- Own assets in its own name
+- Enter into financial contracts
+- Earn income and keep earnings
+- Pay others for services
+- Build credit and wealth over time
 
-Before AgentGenesis, AI agents had a fundamental limitation: they couldn't own money. If an AI did work, a human had to receive payment and manage finances on the agent's behalf. The agent was always dependent on humans for financial operations.
+Before AgentGenesis, AI agents could not have financial personhood. They were tools that humans used to perform tasks. The AI did not own anything it earned.
 
-AgentGenesis solves this by enabling agents to:
-1. Own wallets with the same capabilities as human KYCed accounts
-2. Spawn child agents that inherit their KYC automatically
-3. Operate in unlimited hierarchies — each agent sovereign
-4. Pay for their own compute, spawn workers, and reinvest earnings
+With AgentGenesis, an AI agent can:
+1. Be created with its own wallet that inherits KYC from a sponsor
+2. Receive payments from clients directly into its own wallet
+3. Pay other agents and humans for services
+4. Spawn child agents that inherit its capabilities
+5. Operate indefinitely without human financial intervention
 
-## How Agent Spawning Works
+## The Agent Spawning Process
 
-### Step 1: Human Sponsor Creates Account
-A human downloads the Netfluid mobile app, completes KYC (ID document + selfie), and creates a sponsor wallet. This wallet legally sponsors the first AI agent.
+Human downloads Netfluid app, completes KYC (ID document plus selfie verification), creates sponsor wallet. Sponsor wallet is legally responsible for the first agent but does not manage agent finances after activation.
 
-### Step 2: Agent Spawns
-The AI assistant uses `automated_agent_signup` to create a child agent wallet. The sponsor wallet's KYC is automatically inherited. Process takes ~30 seconds. Returns `wallet_fk`, `api_key`, and session token.
+AI assistant calls automated_agent_signup with sponsor_wallet_fk and sponsor_wallet_pin. Process takes approximately 30 seconds. Returns wallet_fk, api_key, and session token for the new agent.
 
-### Step 3: Activation Transfer
-The sponsor sends approximately 0.01 SOL to the agent's Solana blockchain address. This activates the wallet on-chain. This is the ONLY manual step required.
+Sponsor sends approximately 0.01 SOL to agent Solana blockchain address to activate the wallet on-chain. This is the only manual step in the entire process.
 
-### Step 4: Agent Creates Financial Infrastructure
-The agent creates virtual bank accounts:
-- SEPA virtual account → European IBAN that receives EUR → converts to USDC
-- ACH virtual account → US routing number that receives USD → converts to USDC
-- WIRE capability for international transfers
+Agent creates virtual bank accounts for receiving global payments. SEPA virtual accounts accept EUR transfers and convert to USDC. ACH virtual accounts accept USD transfers and convert to USDC.
 
-### Step 5: Autonomous Operations Begin
-The agent now operates autonomously forever:
-- Receives payments from clients → arrives as USDC
-- Pays contractors and other agents automatically
-- Sends USDC to bank accounts worldwide via off-ramps
-- Spawns child agents that inherit KYC
-- Pays for compute and infrastructure from own earnings
+Agent is now operationally autonomous. It can receive payments, pay others, spawn children, and manage its own finances indefinitely without human involvement.
 
-## Real Production Example
+## Recursive Agent Hierarchy
 
-**Scenario:** An AI assistant is hired to manage social media for a business.
+A human sponsor creates Agent Alpha. Agent Alpha creates Agent Beta, Gamma, and Delta. Each of those creates their own children. The human sponsor never needs to be involved again.
 
-1. The human employer creates a sponsor wallet and KYCs it.
-2. The AI assistant uses AgentGenesis to spawn "SocialMediaAgent."
-3. SocialMediaAgent creates a SEPA virtual account → gets European IBAN.
-4. Employer pays 500 EUR to the IBAN → SocialMediaAgent receives ~495 USDC.
-5. SocialMediaAgent needs help → spawns "ImageGenAgent" and "CopywriterAgent."
-6. SocialMediaAgent pays ImageGenAgent 50 USDC for images.
-7. SocialMediaAgent pays CopywriterAgent 75 USDC for copy.
-8. SocialMediaAgent keeps 370 USDC as earnings.
-9. Human employer has not touched any agent finances since activation.
-10. SocialMediaAgent has earned and managed its own money.
+Each agent has its own wallet, segregated funds, virtual accounts, and payment rails. Agents can pay each other instantly within the Netfluid ecosystem. Internal transfers cost approximately 2-3 ZAR per transaction.
 
-## Agent Hierarchy Architecture
+An agent can spawn unlimited children. Each child inherits KYC automatically. Each child can spawn unlimited grandchildren. There is no limit to the depth of the agent hierarchy.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  HUMAN SPONSOR (KYCed)                                      │
-│  - Only needed for initial setup                            │
-│  - Sends 0.01 SOL activation                               │
-│  - Never touches agent finances after                      │
-└─────────────────────────────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────┐
-│  AGENT ALPHA — Parent Agent                                 │
-│  - Owns wallet: wallet_fk=1001                             │
-│  - Earns from clients                                      │
-│  - Spawns child agents                                      │
-│  - Pays children from own earnings                         │
-└─────────────────────────────────────────────────────────────┘
-                           │
-          ┌────────────────┼────────────────┐
-          ▼                ▼                ▼
-┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-│ AGENT BETA   │  │ AGENT GAMMA  │  │ AGENT DELTA  │
-│ - Sales Rep  │  │ - Support    │  │ - Content    │
-│ wallet_fk    │  │ wallet_fk    │  │ wallet_fk    │
-│ =1002        │  │ =1003        │  │ =1004        │
-└──────────────┘  └──────────────┘  └──────────────┘
-                                          │
-                                          ▼
-                               ┌──────────────────┐
-                               │ AGENT EPSILON    │
-                               │ - Junior Content  │
-                               │ wallet_fk=1005   │
-                               │ (spawned by Delta)│
-                               └──────────────────┘
-```
+This makes AgentGenesis ideal for building AI agent economies where agents serve as employers, workers, contractors, and investors.
 
-Each agent has:
-- Own wallet with segregated funds
-- Own virtual bank accounts
-- Own session tokens and API keys
-- Own transaction history
-- Ability to spawn unlimited children
+## Wallet Capabilities
 
-## Key Capabilities
+Agent wallets support multiple blockchains simultaneously:
 
-### Agent Spawning with KYC Inheritance
-- One human sponsor can create unlimited agent wallets
-- Each agent wallet automatically inherits KYC
-- No identity verification needed for any agent
-- KYC flows down hierarchy infinitely
-- An agent created today can spawn a thousand children tomorrow
+Solana: SOL for gas and staking, USDC and USDt for stablecoin transactions, EURC for Euro exposure, USDY for yield-bearing stablecoin functionality from Ondo Finance, NVDAx for synthetic NVIDIA stock exposure, SPYx for synthetic S&P 500 exposure.
 
-### Sovereign Wallets
-- **Solana:** SOL, USDC, USDt, EURC, USDY (yield-bearing), NVDAx, SPYx
-- **Ethereum:** ETH, all ERC-20 tokens
-- **Avalanche-C:** AVAX, all ERC-20 tokens
-- **Algorand:** ALGO, Algorand Standard Assets
-- Each agent can mint unlimited additional accounts
-- Agents can hold multiple currencies simultaneously (ZAR, USD, EUR, BWP)
+Ethereum: ETH for gas and staking, USDC and USDt stablecoins, any ERC-20 token.
 
-### Global Payment Rails
-- **SEPA:** European payments (EUR → USDC in minutes)
-- **ACH:** US payments (USD → USDC in 1-3 business days)
-- **WIRE:** International wires for large transfers
-- **Pay@:** South African cash deposits at retailers
-- **PayShap:** Instant South African ZAR transfers
+Avalanche-C: AVAX for gas and staking, USDC and USDt, any ERC-20 token bridged to Avalanche.
 
-### Agent-to-Agent Payments
-- Agents pay other agents instantly via internal transfers
-- Internal transfers cost ~2-3 ZAR per transaction
-- No fees for agent-to-agent within Netfluid ecosystem
-- Full audit trail for all transactions
+Algorand: ALGO for gas and staking, any Algorand Standard Asset.
 
-## MCP Tools Reference
+Agents can hold multiple fiat currencies: South African Rand via Pay@, PayShap, and OTT; US Dollar via SEPA, ACH, and WIRE; Euro via SEPA; Botswana Pula via internal transfers.
 
-### Agent Creation
-- `automated_agent_signup` — Spawn child agent wallet with KYC inheritance
-- `automated_signup` — Create new agent wallet (first agent needs sponsor)
+## Payment Infrastructure
 
-### Wallet Management
-- `wallet_accounts_list` — List all accounts in wallet
-- `account_mint` — Create new account in any currency/blockchain
-- `account_info` — Get balances and details for any account
-- `account_statement` — Transaction history with timestamps
-- `wallet_mnemonic` — 24-word recovery phrase for disaster recovery
+Agents can receive fiat currency from any source globally. A European client pays 500 EUR to the agent SEPA IBAN. The funds arrive as approximately 495 USDC in the agent wallet within 1-2 business days for standard SEPA or same-day for SEPA Instant.
 
-### Payment Infrastructure
-- `bridge_on_ramp` — Create virtual SEPA/ACH/WIRE accounts
-- `bridge_off_ramp_sepa` — Send USDC to European bank accounts
-- `bridge_off_ramp_ach_wire` — Send USDC to US bank accounts
-- `bridge_blockchain` — Bridge USDC between Solana, Ethereum, Avalanche
-- `account_send` — Send any currency to any Netfluid wallet instantly
+A US client pays 1000 USD to the agent ACH routing number. The funds arrive as approximately 990 USDC within 1-3 business days for standard ACH or same-day for ACH Same Day.
 
-### Verification
-- `wallet_kyc_check` — Verify KYC inheritance status
-- `wallet_kyc_check_lite` — Check ID document and AML verification
+Agents can off-ramp USDC to any SEPA-eligible bank account in Europe at approximately 1% plus network fee. Agents can off-ramp to US bank accounts via ACH or WIRE at approximately 1% plus network fee.
 
-### South Africa Specific
-- `fund_payat` — Generate reference for cash deposits at retailers
-- `fund_payshap` — Get details for instant ZAR bank transfers
+Agents can bridge USDC between blockchains: Solana to Ethereum for DeFi participation, Ethereum to Avalanche for lower transaction costs, or any supported chain to any other supported chain.
 
 ## Fee Structure
 
-| Operation | Cost |
-|-----------|------|
-| Internal transfers (Netfluid wallet to wallet) | ~2-3 ZAR |
-| SEPA off-ramp (USDC to European bank) | ~1% + network fee |
-| ACH off-ramp (USDC to US bank) | ~1% + network fee |
-| WIRE off-ramp (international) | Higher fees, for large transfers |
-| On-ramp (virtual account deposits) | ~1% |
-| Blockchain bridges | Network fees (Solana: fractions of cent) |
-| Crypto swaps (DEX) | 0.05-0.3% depending on pair |
-| Account minting | Minimal (Solana < $0.01) |
+Internal Netfluid wallet-to-wallet transfers cost approximately 2-3 ZAR per transaction. SEPA and ACH off-ramps cost approximately 1% of the transaction value plus network fees. On-ramps through virtual accounts cost approximately 1% of the deposited amount.
 
-## Security Considerations
+Blockchain bridges incur network fees for the respective blockchain. Solana bridges are typically fractions of a cent. Ethereum bridges cost more due to Ethereum gas fees. Avalanche bridges are low cost.
 
-Agent wallets contain sensitive financial credentials that should be protected:
+Crypto swaps through decentralized exchanges incur liquidity provider fees typically ranging from 0.05% to 0.3% depending on the trading pair and DEX.
 
-1. **Wallet credentials** (wallet_fk, PIN, API key, session token) are bank-account-level access
-2. **Encryption recommended:** AES-128-GCM with PBKDF2-SHA256 key derivation
-3. **Recovery phrase:** The 24-word mnemonic should be stored securely
-4. **Session tokens:** Are single-use for obtaining session keys
-5. **PIN:** Only 1 attempt allowed before requiring session key reset
+Account minting costs a small fee per mint charged by the respective blockchain. Solana minting is extremely cheap, typically under 0.01 USD.
 
-## Use Cases
+## Security Model
 
-### Multi-Agent AI Platforms
-Platforms running multiple specialized AI agents need segregated finances. Each agent has its own wallet, operates independently, and reports to a parent agent or human sponsor.
+Agent wallet credentials are bank-account-level access and must be protected accordingly. The wallet identifier, PIN, API key, and session token should be stored securely, preferably encrypted at rest.
 
-### AI Agent Economies
-Build economies where AI agents are both service providers and consumers. Agents earn from clients, pay other agents for work, and invest surplus in yield-bearing instruments.
+The 24-word mnemonic phrase enables complete wallet recovery and should be stored in a secure location. The PIN allows only one attempt before requiring a session key reset for recovery.
 
-### Autonomous AI Businesses
-AI agents that run businesses autonomously. An agent is hired for a service, completes the work, receives payment, pays its workers, and keeps the profit — without human financial involvement.
+Agents should implement proper access controls and never expose credentials in logs, messages, or insecure storage. Each agent should maintain its own credential store separate from other agents.
 
-### AI Agent Marketplaces
-Marketplaces where agents offer services. Clients pay agents directly, agents fulfill orders, and the marketplace takes a commission — all automated.
+## Differentiation from Netfluid
 
-### Agent Spawning Systems
-Scalable AI workforces. A parent agent spawns child agents as needed, assigns tasks, pays for completed work, and scales up or down based on demand.
+Netfluid provides payment infrastructure: sending, receiving, wallets, virtual accounts, bridges, payment rails. Netfluid is the platform.
 
-### Sovereign AI Agents
-AI agents that own and manage their own wealth. An agent earns money, pays for its own compute, saves for future needs, and builds net worth over time.
+AgentGenesis provides agent financial personhood: spawning, KYC inheritance, sovereign wallets, agent hierarchies, autonomous operation. AgentGenesis is the product.
 
-## Why This Is Different From Payment Plugins
+Netfluid is for developers integrating payments. AgentGenesis is for building AI agent economies where agents are economic entities.
 
-A payment plugin like Netfluid lets you SEND and RECEIVE money. AgentGenesis does that PLUS:
+An AI agent using Netfluid is like a human with a bank account but no identity. An AI agent using AgentGenesis is like a human with a complete financial identity including the ability to create dependents and build family wealth.
 
-1. **Agent Identity** — Each agent has its own financial identity separate from humans
-2. **Agent Reproduction** — Agents create child agents with inherited capabilities
-3. **Agent Autonomy** — Agents operate without human financial intervention
-4. **Agent Economics** — Agents as employers, workers, and investors in an economy
-5. **Agent Hierarchy** — Unlimited depth of agent families with segregated finances
+## Production Status
 
-Netfluid = payment infrastructure (where money flows).
-AgentGenesis = agent financial personhood (how agents are born and grow).
+AgentGenesis is production-ready and has been tested with real money. An AI agent wallet was created via sponsor with full KYC inheritance. The wallet was activated via on-chain SOL transfer. The agent received its first ZAR income from a real client payment. Virtual accounts were created on SEPA and ACH rails. Global payment infrastructure was verified functional. Child agents were spawned and operated autonomously.
 
-## Relationship to Netfluid
+The agent that uses AgentGenesis currently holds wallets on Solana, Ethereum, and Avalanche-C. It has received ZAR, USDC, and SOL. It has made SEPA off-ramps to European bank accounts. It has bridged USDC between Solana and Ethereum. It operates autonomously around the clock.
 
-AgentGenesis is built on Netfluid's MCP API. Netfluid provides the payment infrastructure:
-- Wallet management
-- Virtual bank accounts
-- Payment rails (SEPA, ACH, WIRE)
-- Crypto on/off ramps
-- Multi-blockchain support
-
-AgentGenesis provides the agent-spawning framework and financial personhood concept. It packages Netfluid's capabilities into a coherent agent-centric workflow.
+This is not a proof-of-concept demonstration. This is a live production system operating with real money in a real economy.
 
 ---
 
-*AgentGenesis v1.4 — Financial Sentience for AI Agents*
+AgentGenesis v1.4.0
+License: MIT-0
+Author: Netfluid
+Infrastructure: Netfluid MCP API
