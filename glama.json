@@ -6,6 +6,6 @@
   "repository": "https://github.com/netfluid/skill",
   "homepage": "https://netfluid.io",
   "license": "MIT",
-  "tags": ["banking", "crypto", "payments", "finance"],
+  "tags": ["ai-agent", "banking", "crypto", "agent", "sepa", "ach", "wire", "usdc", "solana", "ethereum", "payments", "finance", "zar", "south-africa", "global-payments", "agent-income"],
   "categories": ["finance", "payments", "banking", "crypto"]
 }
