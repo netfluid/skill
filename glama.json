@@ -1,14 +1,11 @@
 {
   "schema_version": "1.0",
   "name": "netfluid",
-  "version": "7.0.2",
+  "version": "7.0.3",
   "description": "Payment integration skill for fiat and crypto transfers",
   "author": {
     "name": "Netfluid",
     "website": "https://netfluid.io"
   },
-  "license": "MIT",
-  "repository": "https://github.com/netfluid/skill",
-  "required_env_vars": ["NETFLUID_API_KEY"],
-  "primary_credential": "api_key"
+  "license": "MIT"
 }

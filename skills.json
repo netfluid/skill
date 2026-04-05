@@ -3,7 +3,7 @@
   "skills": [
     {
       "name": "netfluid",
-      "version": "7.0.2",
+      "version": "7.0.3",
       "description": "Payment integration skill for fiat and crypto transfers using Netfluid API",
       "author": {
         "name": "Netfluid",
@@ -17,29 +17,10 @@
       },
       "tags": ["payments", "banking", "crypto"],
       "difficulty": "intermediate",
-      "installation": {
-        "type": "git",
-        "url": "https://github.com/netfluid/skill"
-      },
-      "required_env_vars": ["NETFLUID_API_KEY"],
-      "primary_credential": "api_key",
-      "env_vars": {
-        "NETFLUID_API_KEY": {
-          "description": "Netfluid API key from app Settings",
-          "required": true,
-          "sensitivity": "high"
-        }
-      },
       "capabilities": [
         "payment_processing",
         "account_queries",
         "transfers"
-      ],
-      "supported_currencies": ["ZAR", "USD", "EUR"],
-      "security_practices": [
-        "all_transactions_require_confirmation",
-        "credentials_not_stored_permanently",
-        "sandbox_testing_recommended"
       ]
     }
   ]
