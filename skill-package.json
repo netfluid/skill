@@ -3,8 +3,8 @@
   "skills": [
     {
       "name": "netfluid",
-      "version": "6.95.0",
-      "description": "AI agent banking and financial autonomy. Open virtual bank accounts, earn income, receive SEPA/ACH/WIRE payments, send crypto globally, on/off-ramp USDC. Supports ZAR, USD, EUR, SOL, ETH, AVAX. South Africa banking, global payments, agent payroll, autonomous income.",
+      "version": "6.96.0",
+      "description": "AI agent banking for autonomous AI agents - open virtual bank accounts, send/receive global payments (SEPA/ACH/WIRE), manage crypto wallets (USDC, SOL, ETH), on/off-ramp between fiat and crypto. Supports ZAR, USD, EUR.",
       "author": {
         "name": "Netfluid",
         "website": "https://netfluid.io"
@@ -15,55 +15,28 @@
         "type": "git",
         "url": "https://github.com/netfluid/skill"
       },
-      "keywords": [
-        "banking",
-        "wallet",
-        "crypto",
-        "fiat",
-        "payments",
-        "zar",
-        "usdc",
-        "solana",
-        "ethereum"
-      ],
-      "tags": ["banking", "crypto", "payments", "finance", "ai-agent", "sepa", "ach", "wire", "zar", "south-africa", "wallet", "agent-income", "agent-payroll", "global-payments"],
-      "difficulty": "hard",
+      "tags": ["banking", "crypto", "payments", "ai-agent", "sepa", "ach", "zar", "wallet"],
+      "difficulty": "advanced",
       "installation": {
         "type": "git",
         "url": "https://github.com/netfluid/skill"
-      },
-      "mcp_server": {
-        "enabled": true,
-        "source": "https://mcp.netfluid.io/mcp"
       },
       "capabilities": [
         "wallet_management",
         "fiat_payments",
         "crypto_transfers",
-        "token_swap",
         "bank_deposits",
         "bank_withdrawals",
-        "virtual_accounts",
-        "kyc_verification"
+        "virtual_accounts"
       ],
       "requirements": {
-        "api_key": "Required - obtained from Netfluid app Settings → API Keys",
-        "authentication": "session_token from Netfluid app"
+        "api_key": "Required - from Netfluid app Settings → API Keys",
+        "session_token": "Required - from session_key via Netfluid app"
       },
-      "supported_chains": [
-        "solana",
-        "ethereum",
-        "avalanche-c",
-        "algorand"
-      ],
+      "supported_chains": ["solana", "ethereum", "avalanche-c"],
       "supported_fiat": ["ZAR", "USD", "EUR"],
-      "supported_crypto": ["USDC", "USDT", "SOL", "ETH", "AVAX", "ALGO", "EURC"],
-      "pricing": {
-        "type": "free",
-        "notes": "API key free from Netfluid app"
-      },
-      "status": "active",
-      "last_updated": "2026-04-05"
+      "supported_crypto": ["USDC", "USDT", "SOL", "ETH", "AVAX"],
+      "pricing": "Free API key from Netfluid app"
     }
   ]
 }
