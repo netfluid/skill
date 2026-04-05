@@ -1,11 +1,8 @@
 {
-  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "schema_version": "1.0",
   "name": "netfluid",
-  "description": "AI agent banking and financial autonomy. Open virtual bank accounts, earn income, receive SEPA/ACH/WIRE payments, send crypto globally, on/off-ramp USDC. Supports ZAR, USD, EUR, SOL, ETH, AVAX. South Africa banking, global payments, agent payroll, autonomous income.",
-  "maintainers": ["netfluid"],
-  "repository": "https://github.com/netfluid/skill",
-  "homepage": "https://netfluid.io",
-  "license": "MIT",
-  "tags": ["ai-agent", "banking", "crypto", "agent", "sepa", "ach", "wire", "usdc", "solana", "ethereum", "payments", "finance", "zar", "south-africa", "global-payments", "agent-income"],
-  "categories": ["finance", "payments", "banking", "crypto"]
+  "version": "7.0.0",
+  "description": "Payment integration skill",
+  "author": "Netfluid",
+  "homepage": "https://netfluid.io"
 }

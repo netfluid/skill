@@ -3,12 +3,11 @@
   "skills": [
     {
       "name": "netfluid",
-      "version": "6.96.0",
-      "description": "AI agent banking for autonomous AI agents - open virtual bank accounts, send/receive global payments (SEPA/ACH/WIRE), manage crypto wallets (USDC, SOL, ETH), on/off-ramp between fiat and crypto. Supports ZAR, USD, EUR.",
+      "version": "7.0.0",
+      "description": "Payment integration skill for fiat and crypto transfers",
       "author": {
         "name": "Netfluid",
-        "website": "https://netfluid.io",
-        "support": "support@netfluid.io"
+        "website": "https://netfluid.io"
       },
       "homepage": "https://netfluid.io",
       "license": "MIT",
@@ -16,36 +15,8 @@
         "type": "git",
         "url": "https://github.com/netfluid/skill"
       },
-      "tags": ["banking", "crypto", "payments", "finance", "ai-agent", "sepa", "ach", "wire", "zar", "south-africa", "wallet", "agent-income", "agent-payroll", "global-payments"],
-      "difficulty": "advanced",
-      "installation": {
-        "type": "git",
-        "url": "https://github.com/netfluid/skill"
-      },
-      "capabilities": [
-        "wallet_management",
-        "fiat_payments",
-        "crypto_transfers",
-        "bank_deposits",
-        "bank_withdrawals",
-        "virtual_accounts",
-        "kyc_verification"
-      ],
-      "requirements": {
-        "api_key": "Required - from Netfluid app Settings → API Keys",
-        "session_token": "Required - from single-use session_key via Netfluid app",
-        "wallet_fk": "Required - wallet ID from /wallet/accounts_list",
-        "account_fk": "Required - account ID from /wallet/accounts_list"
-      },
-      "security_model": {
-        "credentials_transient": "API keys and tokens used only for API calls, not stored",
-        "human_confirmation": "All transactions require user confirmation",
-        "audit_trail": "All operations logged by Netfluid API"
-      },
-      "supported_chains": ["solana", "ethereum", "avalanche-c"],
-      "supported_fiat": ["ZAR", "USD", "EUR"],
-      "supported_crypto": ["USDC", "USDT", "SOL", "ETH", "AVAX"],
-      "pricing": "Free API key from Netfluid app. Transaction fees may apply."
+      "tags": ["payments", "banking", "crypto"],
+      "difficulty": "intermediate"
     }
   ]
 }

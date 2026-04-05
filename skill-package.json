@@ -3,40 +3,14 @@
   "skills": [
     {
       "name": "netfluid",
-      "version": "6.96.0",
-      "description": "AI agent banking for autonomous AI agents - open virtual bank accounts, send/receive global payments (SEPA/ACH/WIRE), manage crypto wallets (USDC, SOL, ETH), on/off-ramp between fiat and crypto. Supports ZAR, USD, EUR.",
+      "version": "7.0.0",
+      "description": "Payment integration skill for fiat and crypto",
       "author": {
         "name": "Netfluid",
         "website": "https://netfluid.io"
       },
-      "homepage": "https://netfluid.io",
       "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/netfluid/skill"
-      },
-      "tags": ["banking", "crypto", "payments", "ai-agent", "sepa", "ach", "zar", "wallet"],
-      "difficulty": "advanced",
-      "installation": {
-        "type": "git",
-        "url": "https://github.com/netfluid/skill"
-      },
-      "capabilities": [
-        "wallet_management",
-        "fiat_payments",
-        "crypto_transfers",
-        "bank_deposits",
-        "bank_withdrawals",
-        "virtual_accounts"
-      ],
-      "requirements": {
-        "api_key": "Required - from Netfluid app Settings → API Keys",
-        "session_token": "Required - from session_key via Netfluid app"
-      },
-      "supported_chains": ["solana", "ethereum", "avalanche-c"],
-      "supported_fiat": ["ZAR", "USD", "EUR"],
-      "supported_crypto": ["USDC", "USDT", "SOL", "ETH", "AVAX"],
-      "pricing": "Free API key from Netfluid app"
+      "tags": ["payments", "banking", "crypto"]
     }
   ]
 }
