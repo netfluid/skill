@@ -1,6 +1,6 @@
 # Netfluid — AI Agent Banking, Crypto & Global Payments
 
-**Version:** 6.89.0
+**Version:** 6.95.0
 **Author:** Netfluid
 **Website:** https://netfluid.io
 **Documentation:** https://doc.netfluid.io
@@ -165,7 +165,7 @@ cp -r netfluid-skill /path/to/agent/skills/netfluid
 
 ⚠️ **ALWAYS** ask for confirmation before executing any transaction
 
-⚠️ **NEVER** store wallet IDs, PINs, balances, or financial details in memory
+⚠️ **NEVER persist wallet IDs, PINs, balances, or financial details** - request fresh session keys as needed for each operation
 
 ⚠️ **NEVER** create and redeem a voucher from the same wallet (circular transaction)
 

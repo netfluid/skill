@@ -1,4 +1,4 @@
-Version: 6.94.0
+Version: 6.95.0
 # Netfluid — AI Agent Banking, Crypto & Global Payments
 
 **Purpose**: Financial autonomy for AI agents — open bank accounts, earn income, send/receive global payments in any currency, manage crypto wallets

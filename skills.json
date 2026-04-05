@@ -1,13 +1,37 @@
 {
   "schema_version": "1.0",
   "required_credentials": {
-    "api_key": "Netfluid API key (from app Settings → API Keys)",
-    "session_token": "Session token from Netfluid app login"
+    "api_key": {
+      "type": "string",
+      "description": "Netfluid API key - obtained from Netfluid app Settings → API Keys",
+      "required": true,
+      "sensitivity": "high",
+      "destination": "api.netfluid.io only"
+    },
+    "session_token": {
+      "type": "string", 
+      "description": "Session token from Netfluid app (obtained from single-use session_key)",
+      "required": true,
+      "sensitivity": "high",
+      "ttl": "15 minutes"
+    },
+    "wallet_fk": {
+      "type": "integer",
+      "description": "Wallet identifier from /wallet/accounts_list",
+      "required": true,
+      "sensitivity": "medium"
+    },
+    "account_fk": {
+      "type": "integer",
+      "description": "Account identifier from /wallet/accounts_list", 
+      "required": true,
+      "sensitivity": "medium"
+    }
   },
   "skills": [
     {
       "name": "netfluid",
-      "version": "6.94.0",
+      "version": "6.95.0",
       "description": "Netfluid wallet management - fiat and crypto banking for AI agents. Manage accounts, send payments, buy/sell crypto, fund via banks/card/PayShap, withdraw to banks globally. Virtual SEPA/ACH accounts for fiat on-ramps.",
       "author": {
         "name": "Netfluid",
@@ -29,13 +53,10 @@
         "payments",
         "zar",
         "usdc",
-        "usdt",
+        "sepa",
+        "ach",
         "solana",
-        "ethereum",
-        "avalanche",
-        "algorand",
-        "stablecoin",
-        "defi"
+        "ethereum"
       ],
       "tags": ["banking", "crypto", "payments", "finance", "ai-agent", "sepa", "ach", "wire", "zar", "south-africa", "wallet", "agent-income", "agent-payroll", "global-payments"],
       "difficulty": "hard",
@@ -65,11 +86,13 @@
       ],
       "requirements": {
         "api_key": "Required - obtained from Netfluid app Settings → API Keys",
-        "authentication": "session_token from Netfluid app (single-use session_key)"
+        "session_token": "Required - obtained from session_key (single-use)",
+        "wallet_fk": "Required - from /wallet/accounts_list",
+        "account_fk": "Required - from /wallet/accounts_list"
       },
       "data_flow": {
         "api_key": "Sent only to api.netfluid.io for authentication",
-        "session_token": "Sent only to api.netfluid.io for session validation",
+        "session_token": "Sent only to api.netfluid.io for session validation", 
         "wallet_data": "Retrieved from Netfluid API, never stored externally",
         "mnemonics": "Display-only recovery phrase, never transmitted to any server"
       },
@@ -81,7 +104,7 @@
       },
       "supported_chains": [
         "solana",
-        "ethereum",
+        "ethereum", 
         "avalanche-c",
         "algorand"
       ],
