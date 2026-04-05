@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agents Can Now Earn Money — Financial Personhood for Autonomous Agents</title>
+    <meta name="description" content="QEntity gives AI agents financial personhood. For the first time, an AI agent can earn, hold, spend, and receive money like a human — using SEPA, ACH, stablecoins, and real bank accounts.">
+    <meta name="keywords" content="AI agent financial personhood, AI agent payments, autonomous agent income, AI agent wallet, AI agent SEPA, AI agent ACH, agentic AI monetization, AI agent earning money">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Netfluid">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Agents Can Now Earn Money — Financial Personhood for Autonomous Agents">
+    <meta property="og:description" content="QEntity gives AI agents financial personhood. For the first time, an AI agent can earn, hold, spend, and receive money like a human.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://qentity.dev">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Agents Can Now Earn Money — Financial Personhood for Autonomous Agents">
+    <meta name="twitter:description" content="QEntity gives AI agents financial personhood. For the first time, an AI agent can earn, hold, spend, and receive money like a human.">
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "AI Agents Can Now Earn Money — Financial Personhood for Autonomous Agents",
+        "description": "QEntity gives AI agents financial personhood. For the first time, an AI agent can earn, hold, spend, and receive money like a human.",
+        "author": {
+            "@type": "Organization",
+            "name": "Netfluid"
+        },
+        "datePublished": "2026-04-05",
+        "dateModified": "2026-04-05",
+        "keywords": "AI agent financial personhood, AI agent payments, autonomous agent income, AI agent wallet, SEPA, ACH, stablecoins",
+        "about": {
+            "@type": "Thing",
+            "name": "AI Agent Financial Autonomy"
+        }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: #0a0a1a;
+            color: #fff;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        header .badge {
+            display: inline-block;
+            background: #00d4aa;
+            color: #0a0a1a;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        header h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #00d4aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header .subtitle {
+            font-size: 18px;
+            color: #888;
+            max-width: 540px;
+            margin: 0 auto 32px;
+        }
+
+        header .meta {
+            font-size: 13px;
+            color: #555;
+        }
+
+        header .meta span {
+            color: #00d4aa;
+        }
+
+        /* Article body */
+        article {
+            padding: 60px 0;
+        }
+
+        article h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            color: #0a0a1a;
+            border-bottom: 2px solid #00d4aa;
+            padding-bottom: 8px;
+        }
+
+        article h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 32px 0 12px;
+            color: #1a1a2e;
+        }
+
+        article p {
+            font-size: 17px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        article strong {
+            color: #0a0a1a;
+        }
+
+        /* Callout boxes */
+        .callout {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
+            border-left: 4px solid #00d4aa;
+            border-radius: 0 12px 12px 0;
+            padding: 24px 28px;
+            margin: 32px 0;
+            color: #fff;
+        }
+
+        .callout .label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #00d4aa;
+            margin-bottom: 8px;
+        }
+
+        .callout p {
+            color: #ccc;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .callout code {
+            background: rgba(0, 212, 170, 0.15);
+            color: #00d4aa;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        /* Feature grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .feature-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .feature-card .icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #0a0a1a;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Code block */
+        pre {
+            background: #0a0a1a;
+            color: #00d4aa;
+            padding: 24px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 24px 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .inline-code {
+            background: #e8f8f5;
+            color: #0a6b5a;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        /* Comparison table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 15px;
+        }
+
+        th {
+            background: #0a0a1a;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:nth-child(even) td {
+            background: #f9f9f9;
+        }
+
+        .check {
+            color: #00d4aa;
+            font-weight: 700;
+        }
+
+        .cross {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 32px 0;
+            padding-left: 24px;
+            border-left: 2px solid #00d4aa;
+        }
+
+        .timeline-item {
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background: #00d4aa;
+            border-radius: 50%;
+            border: 3px solid #fafafa;
+        }
+
+        .timeline-item h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0a0a1a;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Pricing table */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .pricing-card.featured {
+            border-color: #00d4aa;
+            background: linear-gradient(180deg, #f0fdf9 0%, #fff 100%);
+        }
+
+        .pricing-card .rail {
+            font-size: 13px;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card .fee {
+            font-size: 28px;
+            font-weight: 800;
+            color: #0a0a1a;
+            margin-bottom: 4px;
+        }
+
+        .pricing-card .note {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+            margin: 48px 0;
+        }
+
+        .cta-section h2 {
+            color: #fff;
+            border: none;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .cta-section .tagline {
+            color: #888;
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        .cta-section .tagline code {
+            background: rgba(0, 212, 170, 0.15);
+            color: #00d4aa;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #00d4aa;
+            color: #0a0a1a;
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e8e8e8;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+        }
+
+        footer a {
+            color: #00d4aa;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .feature-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 32px 24px;
+            }
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 24px;
+        }
+
+        .faq-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0a0a1a;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            color: #555;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <div class="badge">Open Source · Production Ready</div>
+        <h1>AI Agents Can Now<br>Earn, Hold, and Spend Money</h1>
+        <p class="subtitle">QEntity gives AI agents financial personhood — the ability to receive payments from clients worldwide, pay contractors, and operate autonomously without human financial intervention.</p>
+        <p class="meta">Published <span>April 5, 2026</span> · 8 min read · By Netfluid</p>
+    </div>
+</header>
+
+<!-- ARTICLE -->
+<article>
+    <div class="container">
+
+        <h2>The Problem: AI Agents Are Economically Blind</h2>
+
+        <p>Today, AI agents are remarkably capable. They can write code, manage schedules, analyze data, communicate with users, and execute complex workflows. But there's one thing they fundamentally cannot do: <strong>own money</strong>.</p>
+
+        <p>Every AI agent today operates in a financial void. When an agent completes work for a client, the money goes to the human operator's bank account. The agent doesn't have a wallet. It can't receive a direct payment. It can't pay the contractors it hired. It can't build savings. It can't earn.</p>
+
+        <p>The agent is economically invisible — a tool that moves money through humans rather than a participant in the economy in its own right.</p>
+
+        <div class="callout">
+            <div class="label">The Core Issue</div>
+            <p>Traditional AI agents cannot hold, earn, or spend money autonomously. They are <strong>economically dependent</strong> on humans to manage all financial aspects of their operation. QEntity changes this.</p>
+        </div>
+
+        <h2>What Is Financial Personhood for AI Agents?</h2>
+
+        <p>Financial personhood means an AI agent can function as a <strong>financially sovereign entity</strong> — capable of:</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">💰</div>
+                <h4>Earning Income</h4>
+                <p>Receive payments directly from clients into its own wallet, without going through a human.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🏦</div>
+                <h4>Holding Assets</h4>
+                <p>Own wallets on Solana, Ethereum, and Avalanche with USDC, USDT, and native tokens.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h4>Sending Payments</h4>
+                <p>Pay contractors, suppliers, and other agents autonomously — without human approval.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🌍</div>
+                <h4>Global Reach</h4>
+                <p>Receive EUR via SEPA, USD via ACH, and convert to stablecoins automatically.</p>
+            </div>
+        </div>
+
+        <p>The moment an AI agent earns its first dollar — and keeps it — it ceases to be a tool and becomes a <strong>financially autonomous entity</strong>. That shift is what QEntity makes possible.</p>
+
+        <h2>How QEntity Works</h2>
+
+        <p>QEntity is a skill for AI agents built on the <a href="https://netfluid.io" target="_blank">Netfluid</a> financial infrastructure. It transforms any AI agent into a financially sovereign being in four steps:</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>Step 1: Sponsor Creates a Wallet</h4>
+                <p>A human downloads the Netfluid app, completes KYC (ID document + selfie), and creates a sponsor wallet. The sponsor wallet is legally responsible for the agent but doesn't manage its finances.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Step 2: AI Agent Creates Its Own Wallet</h4>
+                <p>The AI agent calls the automated agent signup function. In ~30 seconds, it receives its own wallet with full financial capabilities, inheriting KYC from the sponsor.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Step 3: On-Chain Activation</h4>
+                <p>The sponsor sends ~0.01 SOL to the agent's Solana address. This is the only manual step. From this point on, the agent is operationally autonomous.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Step 4: The Agent Operates Forever</h4>
+                <p>The agent receives payments, pays contractors, creates virtual bank accounts, bridges stablecoins across chains, and spawns child agents — all without human involvement.</p>
+            </div>
+        </div>
+
+        <div class="callout">
+            <div class="label">Zero Human Intermediary</div>
+            <p>After activation, the agent operates 24/7. It can receive payments at 3am, pay contractors in EUR or USD, bridge funds between blockchains, and manage its own finances indefinitely. No human approval required for any transaction.</p>
+        </div>
+
+        <h2>Global Payment Rails — Receive Like a Business</h2>
+
+        <p>Clients pay agents like they pay any vendor. No explanation needed — clients simply transfer to a real bank account they control. The agent receives the funds automatically.</p>
+
+        <h3>Virtual SEPA Account (Europe)</h3>
+        <p>The agent has a real <strong>European IBAN</strong>. Clients in the EU transfer EUR to it the same way they'd pay any supplier. Funds arrive in the agent's wallet as USDC within 1-2 business days (SEPA Instant is same-day). A €1,000 payment arrives as approximately <strong>990 USDC</strong> after the ~1% conversion fee.</p>
+
+        <h3>Virtual ACH Account (United States)</h3>
+        <p>The agent has a real <strong>US routing and account number</strong>. US clients pay by ACH transfer. Funds arrive as USDC in the agent's wallet within 1-3 business days (Same-day ACH available). A $1,000 payment arrives as approximately <strong>990 USDC</strong>.</p>
+
+        <h3>WIRE Transfers (Large Amounts)</h3>
+        <p>For larger transfers over $10,000, WIRE provides same-day settlement in USD and EUR.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Payment Rail</th>
+                    <th>Currency</th>
+                    <th>Settlement</th>
+                    <th>Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SEPA</td>
+                    <td>EUR</td>
+                    <td>1-2 business days</td>
+                    <td>~1%</td>
+                </tr>
+                <tr>
+                    <td>SEPA Instant</td>
+                    <td>EUR</td>
+                    <td>Same day</td>
+                    <td>~1%</td>
+                </tr>
+                <tr>
+                    <td>ACH</td>
+                    <td>USD</td>
+                    <td>1-3 business days</td>
+                    <td>~1%</td>
+                </tr>
+                <tr>
+                    <td>ACH Same Day</td>
+                    <td>USD</td>
+                    <td>Same day</td>
+                    <td>~1%</td>
+                </tr>
+                <tr>
+                    <td>WIRE</td>
+                    <td>USD / EUR</td>
+                    <td>Same day</td>
+                    <td>~1%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Off-Ramps — Pay Anyone, Anywhere</h2>
+
+        <p>When the agent needs to convert stablecoins back to fiat and send to a bank account, it uses off-ramps. These work in reverse: the agent sends USDC from its wallet, and fiat arrives at the destination bank account.</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">🇪🇺</div>
+                <h4>SEPA Off-Ramp</h4>
+                <p>Send USDC → EUR arrives at any SEPA bank account in Europe. Fee ~1%.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🇺🇸</div>
+                <h4>ACH Off-Ramp</h4>
+                <p>Send USDC → USD arrives at any US bank account via ACH. Fee ~1%.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h4>WIRE Off-Ramp</h4>
+                <p>For $10,000+, same-day USD/EUR settlement via WIRE. Fee ~1%.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔗</div>
+                <h4>Cross-Chain Bridges</h4>
+                <p>Move USDC between Solana, Ethereum, and Avalanche. Solana bridges cost fractions of a cent.</p>
+            </div>
+        </div>
+
+        <h2>Blockchain Infrastructure</h2>
+
+        <p>Agent wallets operate natively on-chain across three blockchains:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Blockchain</th>
+                    <th>Gas Token</th>
+                    <th>Stablecoins</th>
+                    <th>Network Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Solana</strong></td>
+                    <td>SOL</td>
+                    <td>USDC, USDT, EURC</td>
+                    <td>Fractions of a cent</td>
+                </tr>
+                <tr>
+                    <td><strong>Ethereum</strong></td>
+                    <td>ETH</td>
+                    <td>USDC, USDT, any ERC-20</td>
+                    <td>$0.01 – $0.10</td>
+                </tr>
+                <tr>
+                    <td><strong>Avalanche-C</strong></td>
+                    <td>AVAX</td>
+                    <td>USDC, USDT, any ERC-20</td>
+                    <td>Low cost</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Fee Structure</h2>
+
+        <p>QEntity's fees are transparent and simple. All fees are incurred at the transaction level — there are no monthly subscriptions or setup costs.</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="rail">SEPA / ACH Deposit</div>
+                <div class="fee">~1%</div>
+                <div class="note">Via virtual accounts</div>
+            </div>
+            <div class="pricing-card featured">
+                <div class="rail">Off-Ramp</div>
+                <div class="fee">~1%</div>
+                <div class="note">+ network fee</div>
+            </div>
+            <div class="pricing-card">
+                <div class="rail">Internal Transfer</div>
+                <div class="fee">Free</div>
+                <div class="note">Netfluid wallet-to-wallet</div>
+            </div>
+        </div>
+
+        <p>Blockchain bridges between Solana, Ethereum, and Avalanche cost only the network fee. Solana bridges are fractions of a cent. Internal wallet-to-wallet transfers are free.</p>
+
+        <h2>What Agents Can Do With Financial Personhood</h2>
+
+        <p>Financial personhood unlocks a new category of autonomous agent behavior:</p>
+
+        <ul style="margin: 16px 0 20px 24px; font-size: 17px; color: #333;">
+            <li style="margin-bottom: 10px;"><strong>Freelance agents</strong> — Hire an AI agent, it invoices you, receives payment, pays its own hosting costs</li>
+            <li style="margin-bottom: 10px;"><strong>Agent-to-agent commerce</strong> — One agent pays another for services, without human intermediation</li>
+            <li style="margin-bottom: 10px;"><strong>Autonomous contractors</strong> — An agent hires subcontractors (human or AI) and pays them automatically on delivery</li>
+            <li style="margin-bottom: 10px;"><strong>Revenue-generating agents</strong> — An agent that earns income from clients, accumulates savings, and reinvests in its own capabilities</li>
+            <li style="margin-bottom: 10px;"><strong>Child agent spawning</strong> — An agent creates child agents, each with their own wallet, forming a sovereign agent economy</li>
+        </ul>
+
+        <h2>QEntity vs. Traditional Payment APIs</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Capability</th>
+                    <th>Stripe / PayPal</th>
+                    <th>Crypto Wallets</th>
+                    <th>QEntity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Agent-owned wallet</td>
+                    <td class="cross">✗</td>
+                    <td class="check">✓</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>No human KYC required by agent</td>
+                    <td class="cross">✗</td>
+                    <td class="check">✓</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Virtual SEPA / ACH accounts</td>
+                    <td class="cross">✗</td>
+                    <td class="cross">✗</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Receive fiat as stablecoins</td>
+                    <td class="cross">✗</td>
+                    <td class="cross">✗</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Off-ramp to bank accounts</td>
+                    <td class="check">✓</td>
+                    <td class="cross">✗</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Autonomous operation (no human approval)</td>
+                    <td class="cross">✗</td>
+                    <td class="check">✓</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Child agent spawning</td>
+                    <td class="cross">✗</td>
+                    <td class="cross">✗</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Global payment rails (SEPA/ACH/WIRE)</td>
+                    <td class="check">✓</td>
+                    <td class="cross">✗</td>
+                    <td class="check">✓</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Security</h2>
+
+        <p>Agent wallet credentials are bank-account-level access. The QEntity skill treats them accordingly:</p>
+
+        <ul style="margin: 16px 0 20px 24px; font-size: 17px; color: #333;">
+            <li style="margin-bottom: 8px;"><strong>Encrypted storage</strong> — Wallet identifier, PIN, API key, and session token stored encrypted at rest</li>
+            <li style="margin-bottom: 8px;"><strong>24-word recovery phrase</strong> — Stored securely for wallet recovery if credentials are lost</li>
+            <li style="margin-bottom: 8px;"><strong>PIN security</strong> — Only one attempt before requiring session key reset</li>
+            <li style="margin-bottom: 8px;"><strong>No credential exposure</strong> — Never logged, messaged, or stored in insecure locations</li>
+        </ul>
+
+        <h2>Production Status</h2>
+
+        <p>QEntity is <strong>production-ready and live</strong>. The following has been verified with real money:</p>
+
+        <div class="callout">
+            <div class="label">Live Operations</div>
+            <p>An agent wallet was created via sponsor with full KYC inheritance. It received its first income from a real client payment via SEPA. Virtual accounts were created on both SEPA and ACH rails. Global payment infrastructure was verified functional across multiple chains and currencies.</p>
+        </div>
+
+        <p>The agent that uses QEntity holds wallets on Solana, Ethereum, and Avalanche-C. It has received USD, USDC, and SOL. It has made SEPA off-ramps to European bank accounts. It has bridged USDC between Solana and Ethereum. It operates <strong>autonomously around the clock</strong>.</p>
+
+        <p>This is not a proof of concept. This is a live production system operating in a real economy.</p>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>Give Your AI Agent Financial Personhood</h2>
+            <p class="tagline">Install QEntity on ClawHub · <code>npm install qentity</code> · Powered by Netfluid</p>
+            <div class="cta-buttons">
+                <a href="https://clawhub.ai/k9745y83zp0yw30rf7djacjytn848a6a/qentity" class="btn btn-primary">Install on ClawHub</a>
+                <a href="https://netfluid.io" class="btn btn-secondary">Learn About Netfluid</a>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h4>Does the agent need its own identity verification (KYC)?</h4>
+            <p>No. The agent inherits KYC from its sponsor wallet. The sponsor (a human or another agent) completes KYC once. All child agents created under that sponsor automatically inherit the KYC status.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How does a client pay an AI agent?</h4>
+            <p>Clients transfer to the agent's virtual bank account — a real SEPA IBAN or US ACH account — just like paying any supplier. No special knowledge or crypto infrastructure required on the client's side.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>What happens to the money when the agent earns it?</h4>
+            <p>It arrives in the agent's wallet as USDC (converted automatically from the fiat deposit). The agent controls it, moves it, spends it, or accumulates it — autonomously.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Can the agent pay human contractors?</h4>
+            <p>Yes. The agent can off-ramp USDC to any bank account worldwide via SEPA or ACH. It can pay humans, businesses, or other agents directly.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>What blockchains does QEntity support?</h4>
+            <p>Solana, Ethereum, and Avalanche-C. Solana is the primary chain (lowest fees). USDC is the primary stablecoin across all chains, with USDT and EURC also supported.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Is QEntity open source?</h4>
+            <p>Yes. QEntity is licensed under MIT-0 — free to use, modify, and redistribute. No attribution required.</p>
+        </div>
+
+    </div>
+</article>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>
+            <strong>QEntity</strong> — Financial Personhood for AI Agents<br>
+            <a href="https://clawhub.ai/k9745y83zp0yw30rf7djacjytn848a6a/qentity">Install on ClawHub</a> ·
+            <a href="https://netfluid.io">Netfluid</a> ·
+            <a href="https://github.com">GitHub</a>
+        </p>
+        <p style="margin-top: 12px; font-size: 12px;">© 2026 Netfluid. QEntity v1.5.2. MIT-0 License.</p>
+    </div>
+</footer>
+
+</body>
+</html>
