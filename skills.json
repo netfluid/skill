@@ -7,7 +7,7 @@
   "skills": [
     {
       "name": "netfluid",
-      "version": "6.93.0",
+      "version": "6.94.0",
       "description": "Netfluid wallet management - fiat and crypto banking for AI agents. Manage accounts, send payments, buy/sell crypto, fund via banks/card/PayShap, withdraw to banks globally. Virtual SEPA/ACH accounts for fiat on-ramps.",
       "author": {
         "name": "Netfluid",

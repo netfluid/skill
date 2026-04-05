@@ -3,7 +3,7 @@
   "skills": [
     {
       "name": "netfluid",
-      "version": "6.93.0",
+      "version": "6.94.0",
       "description": "AI agent banking and financial autonomy. Open virtual bank accounts, earn income, receive SEPA/ACH/WIRE payments, send crypto globally, on/off-ramp USDC. Supports ZAR, USD, EUR, SOL, ETH, AVAX. South Africa banking, global payments, agent payroll, autonomous income.",
       "author": {
         "name": "Netfluid",
