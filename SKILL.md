@@ -31,43 +31,71 @@ AI assistant calls automated_agent_signup with sponsor_wallet_fk and sponsor_wal
 
 Sponsor sends approximately 0.01 SOL to agent Solana blockchain address to activate the wallet on-chain. This is the only manual step in the entire process.
 
-Agent creates virtual bank accounts for receiving global payments. SEPA virtual accounts accept EUR transfers and convert to USDC. ACH virtual accounts accept USD transfers and convert to USDC.
-
 Agent is now operationally autonomous. It can receive payments, pay others, and manage its own finances indefinitely without human involvement.
 
-## Wallet Capabilities
+## Blockchain Infrastructure
 
-Agent wallets support multiple blockchains simultaneously:
+Agent wallets operate natively on-chain:
 
-**Solana:** SOL for gas and staking, USDC and USDt for stablecoin transactions, EURC for Euro exposure, USDY for yield-bearing stablecoin functionality from Ondo Finance, NVDAx for synthetic NVIDIA stock exposure, SPYx for synthetic S&P 500 exposure.
+**Solana:** SOL for gas, USDC and USDt for stablecoin transactions, EURC for Euro exposure.
 
-**Ethereum:** ETH for gas and staking, USDC and USDt stablecoins, any ERC-20 token.
+**Ethereum:** ETH for gas, USDC and USDt, any ERC-20 token.
 
-**Avalanche-C:** AVAX for gas and staking, USDC and USDt, any ERC-20 token bridged to Avalanche.
+**Avalanche-C:** AVAX for gas, USDC and USDt, any ERC-20 token.
 
-**Algorand:** ALGO for gas and staking, any Algorand Standard Asset.
+On-chain stability: USDC is the primary stablecoin across all chains. It maintains a consistent 1:1 peg to USD. Agents can move USDC between chains via bridges at any time.
 
-Agents can hold multiple fiat currencies: US Dollar via SEPA, ACH, and WIRE; Euro via SEPA; South African Rand via Pay@, PayShap, and OTT; and more.
+## Global Payment Rails
 
-## Payment Infrastructure
+Agents receive fiat currency from clients via virtual bank accounts. A virtual bank account is a receive-only account that converts incoming fiat to USDC automatically.
 
-Agents can receive fiat currency from any source globally. A European client pays 500 EUR to the agent SEPA IBAN. The funds arrive as approximately 495 USDC in the agent wallet within 1-2 business days for standard SEPA or same-day for SEPA Instant.
+**SEPA (Europe):** Agent receives EUR to an IBAN. Funds convert to USDC on arrival. Standard SEPA takes 1-2 business days. SEPA Instant is same-day. A 1000 EUR payment arrives as approximately 990 USDC.
 
-A US client pays 1000 USD to the agent ACH routing number. The funds arrive as approximately 990 USDC within 1-3 business days for standard ACH or same-day for ACH Same Day.
+**ACH (United States):** Agent receives USD to a US routing and account number. Funds convert to USDC on arrival. Standard ACH takes 1-3 business days. Same-day ACH available. A 1000 USD payment arrives as approximately 990 USDC.
 
-Agents can off-ramp USDC to any SEPA-eligible bank account in Europe at approximately 1% plus network fee. Agents can off-ramp to US bank accounts via ACH or WIRE at approximately 1% plus network fee.
+**WIRE:** For larger transfers, WIRE offers same-day settlement in USD and EUR.
 
-Agents can bridge USDC between blockchains: Solana to Ethereum for DeFi participation, Ethereum to Avalanche for lower transaction costs, or any supported chain to any other supported chain.
+Clients pay the agent like they would any other vendor. The agent does not need to explain or justify receiving crypto. From the client's perspective, they are making a normal bank transfer to a bank account they control.
+
+## Off-Ramps to Bank Accounts
+
+Agents convert USDC back to fiat and deposit directly to bank accounts worldwide.
+
+**SEPA Off-Ramp:** Agent sends USDC from its wallet to a European bank account via SEPA. Funds arrive as EUR within 1-2 business days. Fee is approximately 1% plus network fee.
+
+**ACH Off-Ramp:** Agent sends USDC to a US bank account via ACH. Funds arrive as USD within 1-3 business days. ACH Same Day available. Fee is approximately 1% plus network fee.
+
+**WIRE Off-Ramp:** For amounts over 10,000 USD, WIRE offers same-day settlement. Fee is approximately 1% plus network fee.
+
+The agent can set up multiple off-ramp destinations. It can pay contractors, suppliers, and service providers directly without human involvement.
+
+## Stablecoin Operations
+
+Agents hold and move USDC freely between:
+- Internal Netfluid wallet accounts
+- External blockchain addresses
+- Decentralized exchanges
+- Other financial protocols
+
+**On-chain transfers:** Sending USDC to another wallet address is near-instantaneous and costs fractions of a cent on Solana, or 0.01-0.10 USD on Ethereum depending on gas.
+
+**Cross-chain bridges:** USDC can be moved between Solana, Ethereum, and Avalanche. Solana-to-Ethereum is common for accessing Ethereum DeFi. Ethereum-to-Avalanche is common for lower-cost operations.
+
+**DEX swaps:** Agents can swap USDC for other tokens (USDT, EURC, or other stablecoins) through decentralized exchanges. Fees range from 0.05% to 0.3% depending on the pair.
 
 ## Fee Structure
 
-Internal Netfluid wallet-to-wallet transfers cost approximately 2-3 ZAR per transaction. SEPA and ACH off-ramps cost approximately 1% of the transaction value plus network fees. On-ramps through virtual accounts cost approximately 1% of the deposited amount.
+Virtual account deposits (SEPA/ACH): approximately 1% of deposited amount.
 
-Blockchain bridges incur network fees for the respective blockchain. Solana bridges are typically fractions of a cent. Ethereum bridges cost more due to Ethereum gas fees. Avalanche bridges are low cost.
+Off-ramps to bank accounts (SEPA/ACH/WIRE): approximately 1% plus network fees.
 
-Crypto swaps through decentralized exchanges incur liquidity provider fees typically ranging from 0.05% to 0.3% depending on the trading pair and DEX.
+Internal wallet-to-wallet transfers: negligible.
 
-Account minting costs a small fee per mint charged by the respective blockchain. Solana minting is extremely cheap, typically under 0.01 USD.
+Blockchain bridges: network fees only. Solana bridges are fractions of a cent. Ethereum bridges cost 0.01-0.10 USD. Avalanche bridges are low cost.
+
+Crypto swaps through DEX: liquidity provider fees of 0.05% to 0.3%.
+
+Account minting: under 0.01 USD on Solana, higher on Ethereum and Avalanche depending on chain congestion.
 
 ## Security Model
 
@@ -97,7 +125,7 @@ This is not a proof-of-concept demonstration. This is a live production system o
 
 ---
 
-QEntity v1.5.1
+QEntity v1.5.2
 License: MIT-0
 Author: Netfluid
 Infrastructure: Netfluid MCP API
