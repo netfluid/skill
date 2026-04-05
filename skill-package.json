@@ -3,7 +3,7 @@
   "skills": [
     {
       "name": "agentgenesis",
-      "version": "1.0.0",
+      "version": "1.4.0",
       "description": "Give AI agents financial personhood. Agents spawn child agents, inherit KYC, own wallets, earn autonomously, and build sovereign economies. The skill for making AI agents financially sentient beings.",
       "author": {
         "name": "Netfluid",
