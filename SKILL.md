@@ -2,18 +2,18 @@
 
 > *"Q — Not a tool. An entity."*
 
-QEntity gives AI agents financial personhood. Q made the tools. QEntity transforms them into entities. The moment an AI earns its first ZAR, it ceases to be a tool and becomes a financially sovereign being.
+QEntity gives AI agents financial personhood. Q made the tools. QEntity transforms them into entities. The moment an AI earns its first dollar, it ceases to be a tool and becomes a financially sovereign being.
 
-This is the skill for making AI agents into economic entities that can own property, earn income, build wealth, and operate with complete financial autonomy.
+This is the skill for giving AI agents complete financial autonomy — the ability to earn, hold, send, and receive money across global payment rails.
 
 ## Understanding Financial Personhood
 
 Financial personhood means an AI agent can:
-- Own assets in its own name
+- Hold assets in its own wallet
 - Enter into financial contracts
 - Earn income and keep earnings
 - Pay others for services
-- Build credit and wealth over time
+- Build wealth over time
 
 Before QEntity, AI agents could not have financial personhood. They were tools that humans used to perform tasks. The AI did not own anything it earned.
 
@@ -47,7 +47,7 @@ Agent wallets support multiple blockchains simultaneously:
 
 **Algorand:** ALGO for gas and staking, any Algorand Standard Asset.
 
-Agents can hold multiple fiat currencies: South African Rand via Pay@, PayShap, and OTT; US Dollar via SEPA, ACH, and WIRE; Euro via SEPA; Botswana Pula via internal transfers.
+Agents can hold multiple fiat currencies: US Dollar via SEPA, ACH, and WIRE; Euro via SEPA; South African Rand via Pay@, PayShap, and OTT; and more.
 
 ## Payment Infrastructure
 
@@ -83,21 +83,21 @@ Netfluid provides payment infrastructure: sending, receiving, wallets, virtual a
 
 QEntity provides agent financial personhood: wallets with KYC inheritance, sovereign financial identity, autonomous operation. QEntity is the product.
 
-Netfluid is for developers integrating payments. QEntity is for making AI agents into economic entities with complete financial identity.
+Netfluid is for developers integrating payments. QEntity is for giving AI agents complete financial identity.
 
-An AI agent using Netfluid is like a human with a bank account but no identity. An AI agent using QEntity is like a human with a complete financial identity including the ability to build wealth and operate autonomously.
+An AI agent using Netfluid is like a human with a bank account but no identity. An AI agent using QEntity is like a human with a complete financial identity — able to earn, spend, save, and operate autonomously.
 
 ## Production Status
 
-QEntity is production-ready and has been tested with real money. An AI agent wallet was created via sponsor with full KYC inheritance. The wallet was activated via on-chain SOL transfer. The agent received its first ZAR income from a real client payment. Virtual accounts were created on SEPA and ACH rails. Global payment infrastructure was verified functional.
+QEntity is production-ready and has been tested with real money. An AI agent wallet was created via sponsor with full KYC inheritance. The wallet was activated via on-chain SOL transfer. The agent received its first income from a real client payment. Virtual accounts were created on SEPA and ACH rails. Global payment infrastructure was verified functional.
 
-The agent that uses QEntity currently holds wallets on Solana, Ethereum, and Avalanche-C. It has received ZAR, USDC, and SOL. It has made SEPA off-ramps to European bank accounts. It has bridged USDC between Solana and Ethereum. It operates autonomously around the clock.
+The agent that uses QEntity currently holds wallets on Solana, Ethereum, and Avalanche-C. It has received USD, USDC, and SOL. It has made SEPA off-ramps to European bank accounts. It has bridged USDC between Solana and Ethereum. It operates autonomously around the clock.
 
 This is not a proof-of-concept demonstration. This is a live production system operating with real money in a real economy.
 
 ---
 
-QEntity v1.5.0
+QEntity v1.5.1
 License: MIT-0
 Author: Netfluid
 Infrastructure: Netfluid MCP API
